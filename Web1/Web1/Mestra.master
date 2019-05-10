@@ -1,0 +1,60 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Mestra.master.cs" Inherits="Mestra" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="./Content/style.css">
+     <link rel="icon" href="img/icone_bolao.ico" type="image/x-icon" />
+    <title>BETTING</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">Fechar &times;</a>
+            <a href="#">Perfil</a>
+            <a href="#">Cadastro</a>
+        </div>
+            <a onclick="openNav()" class="menuzinho">&#9776;</a>                  
+        <div id="main">
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+            }
+            
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("main").style.marginLeft = "0";
+            }
+        </script>
+        </div>
+        <div class="container">
+            <div id="logo">
+                <h1><span class="highlight">BET</span>TING</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="Default.aspx">home</a></li>
+                    <li><a href=Apostas.aspx>apostas</a></li>
+                    <li><a href=Sobrenos.aspx>sobre nós</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+         
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+                 <footer>
+        <p>BETTING, Copyright &copy; 2019</p>
+    </footer>
+
+
+    </form>
+</body>
+</html>
